@@ -92,14 +92,14 @@ export default function Home() {
               </p>
               <div className="mt-6 flex flex-col gap-4 sm:flex-row">
                 <Link href="/signup">
-                  <Button
-                    size="lg"
-                    className="gap-2 shadow-md transition-all hover:shadow-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Get Started <ArrowRight className="h-4 w-4" />
-                  </Button>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button
+                      size="lg"
+                      className="gap-2 shadow-md transition-all hover:shadow-lg"
+                    >
+                      Get Started <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </motion.div>
                 </Link>
                 <Link href="#how-it-works">
                   <Button size="lg" variant="outline" className="gap-2">
@@ -398,15 +398,15 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
               >
                 <Link href="/signup">
-                  <Button
-                    size="lg"
-                    variant="secondary"
-                    className="gap-2 shadow-md transition-all hover:shadow-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Sign Up Now <ArrowRight className="h-4 w-4" />
-                  </Button>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button
+                      size="lg"
+                      variant="secondary"
+                      className="gap-2 shadow-md transition-all hover:shadow-lg"
+                    >
+                      Sign Up Now <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </motion.div>
                 </Link>
               </motion.div>
             </div>

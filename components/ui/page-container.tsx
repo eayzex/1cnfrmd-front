@@ -2,14 +2,14 @@
 
 import type * as React from "react"
 import { cn } from "@/lib/utils"
-import { motion } from "framer-motion"
+import { motion, type HTMLMotionProps } from "framer-motion"
 
-interface PageContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface PageContainerProps extends Omit<HTMLMotionProps<"div">, "children"> {
   children: React.ReactNode
   animate?: boolean
 }
 
-export function PageContainer({ children, animate = true, className, ...props }: PageContainerProps) {
+export const PageContainer = ({ children, animate = true, className, ...props }: PageContainerProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -22,7 +22,7 @@ export function PageContainer({ children, animate = true, className, ...props }:
 
   if (!animate) {
     return (
-      <div className={cn("space-y-6", className)} {...props}>
+      <div className={cn("space-y-6", className)} {...(props as React.HTMLAttributes<HTMLDivElement>)}>
         {children}
       </div>
     )
@@ -41,7 +41,11 @@ export function PageContainer({ children, animate = true, className, ...props }:
   )
 }
 
-export function PageSection({ children, className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+interface PageSectionProps extends Omit<HTMLMotionProps<"div">, "children"> {
+  children: React.ReactNode
+}
+
+export const PageSection = ({ children, className, ...props }: PageSectionProps) => {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },

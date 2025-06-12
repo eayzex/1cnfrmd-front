@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Download, BarChart2, MessageSquare, Users, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { PageContainer, PageSection } from "@/components/ui/page-container"
+import { PageContainer, PageSection } from "../../../components/ui/page-container"
 import { PageHeader } from "@/components/ui/page-header"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -353,4 +353,10 @@ export default function AnalyticsPage() {
           </TabsContent>
 
           <TabsContent value="messages" className="space-y-6">
-            <div className\
+            {/* ... existing content ... */}
+          </TabsContent>
+        </Tabs>
+      </PageSection>
+    </PageContainer>
+  )
+}
