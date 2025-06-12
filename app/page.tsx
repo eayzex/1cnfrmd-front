@@ -24,9 +24,9 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col overflow-x-hidden">
       <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container p-5 flex h-16 items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -115,10 +115,10 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-16 flex justify-center"
             >
-              <div className="relative rounded-lg border bg-card p-2 shadow-xl">
+              <div className="relative rounded-lg border bg-card p-1 shadow-xl">
                 <div className="overflow-hidden rounded-md bg-muted">
                   <img
-                    src="/placeholder.svg?height=600&width=1200"
+                    src="https://screendy-cdn.fra1.cdn.digitaloceanspaces.com/platfrom-v2/_files/file_1746707185577_1confirmedphoto.png"
                     alt="Dashboard Preview"
                     className="aspect-[16/9] w-full max-w-[1000px] object-cover"
                   />
